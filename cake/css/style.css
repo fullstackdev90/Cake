@@ -60,12 +60,6 @@ img.poly{
     Align-items: flex-start;
     justify-content: space-between;
 }
-.footer{
-    flex-direction: row;
-    align-items: stretch;
-    background: url(../img/backgrnd.png) top center no-repeat;
-    height: 470px;
-}
 .foodandimg{
     display: flex;
     padding-top: 180px;
@@ -308,11 +302,13 @@ h4, p{
 .textandborder p{
     margin-bottom: 59px;
 }
+/*
 .accordion{
-    list-style-type: none;
-    border: 1px black;
-    display: flex;
 }
+
+.grid-info-left{
+}
+*/
 .grid{
     width: 1165px;
     padding-left: 175px;
@@ -332,12 +328,130 @@ h4, p{
 .grid-info p{
     color: #939393;
 }
+.slideshow-container{
+    /*margin-left: 250px;
+    padding-top: 220px;*/
+    background-size: 1100px 400px;
+    background: url(../img/green.png) center no-repeat;
+}
+.prev, .next {
+    cursor: pointer;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+}
+.next{
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover, next:hover{
+    background-color: rgba(0,0,0,0.8);
+}
+.text{
+    color: black;
+    font-size: 12px;
+    position: absolute;
+    margin: auto;
+}
+.dot{
+    cursor: pointer;
+    height: 13px;
+    width: 13px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+.active, dot:hover{
+    background-color: #717171;
+}
+.fade{
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+@-webkit-keyframes fade{
+    from{opacity:.4}
+    to{opacity:1}
+}
+
+.backSlide{
+    display: flex;
+    background-position: 50% 50%;
+    padding-left: 300px;
+    background: url(../img/red.png)center no-repeat;
+    background-size: 900px 385px;*
+    padding-left: 350px;*/
+}
+.mySlides{
+    padding-top: 20px;
+background-size: 1000px 390px;
+background: url(../img/yellow.png)center no-repeat;
+}
+input[type=date]::-webkit-calendar-picker-indicator{
+	display:none;
+}
 input[ type="date"]{
     width: 187px;
     height: 45px;
-    border:1px black;
-    background-position: 90%;
-    background: url("..\img\DateIcon.png");
-    background-size: 30px;
+    text-align: center;
+    border:solid 1px black;
+    background-position: 70%;
+    background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRFm4GVcjdTKOQkaqBdE6TlGZU2zTDWc4f1w&usqp=CAU") no-repeat 15px;
+    background-size: 20px;
     background-repeat: no-repeat;
+    outline: 2px black;
+}
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+}
+.footer-back{    
+    height: 455px;
+    background: url(../img/backgrnd.png) no-repeat;
+    background-size: 100%;
+    font-size: 16px;
+}
+footer{
+    padding-top: 175px;
+    flex-direction: row;
+    align-items: stretch;
+    padding-bottom: 0;
+}
+.footer-menu{
+    padding-top: 100px;
+    display: grid;
+    grid-template-columns:repeat(4,1fr);
+    grid-gap:0 10px;
+    padding-left: 21%;
+    padding-right: 10%;
+}
+.footer-menu a{
+    text-decoration: none;
+    color: #464646
+}
+.footer-menu li{ 
+    list-style-type: none;
+}
+.footer-bottom p{
+    color:#575757;
+    text-align: center;
+    padding: 90px 0;
+}
+.footer-list img{
+    padding-right: 10px;
+}
+.footer-list li{
+    margin-bottom: 10px;
+}
+.footer-list span{
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
 }
